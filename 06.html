@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 6. 使用 prompt 输入一个整数 n，查找并打印出小于等于 n 的所有素数。
+  let n = prompt('输入一个整数 n')
+  for (j = 2; j <= n; j++) {
+    let flag = true
+    for (let i = 2; i < j; i++) {
+      if (j % i === 0) {
+        flag = false
+        break
+      }
+    }
+    if (flag) {
+      document.write(`${j}<br>`)
+    }
+  }
+</script>
+
+</html>

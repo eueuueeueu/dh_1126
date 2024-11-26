@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 10. 使用 prompt 输入若干学生的成绩（输入 0 表示结束输入），计算并输出平均分、最高分和最低分。
+  let score
+  let arr = []
+  let sum = 0
+  do {
+    score = +prompt('输入若干学生的成绩（输入 0 表示结束输入）')
+    arr.push(score)
+  } while (score !== 0);
+  arr.pop()
+  arr.sort(function (a, b) {
+    return a - b
+  })
+  console.log(arr);
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+  }
+  document.write(`平均分是:${sum / arr.length}<br>`)
+  document.write(`最高分是:${arr[arr.length - 1]}<br>`)
+  document.write(`最低分是:${arr[0]}<br>`)
+</script>
+
+</html>

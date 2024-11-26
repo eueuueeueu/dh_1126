@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 7. 使用 prompt 输入一个整数 n 使用循环打印出前 n 个斐波那契数列的数字。
+  let n = prompt('输入一个整数 n')
+  let a = [1, 1]
+  for (let i = 0; i <= n; i++) {
+    if (i > a.length) {
+      a.push(a[a.length - 1] + a[a.length - 2])
+    }
+  }
+  document.write(a)
+</script>
+
+</html>

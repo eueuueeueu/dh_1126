@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 9. 生成一个 1 到 100 之间的随机数，让用户猜这个数，每次猜测后给出提示（大了、小了或猜对了），直到用户猜对为止。
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
+  let num100 = getRandom(1, 100)
+  let num4
+  while (true) {
+    num4 = prompt('猜猜我心里想的数字')
+    if (num4 > num100) {
+      alert('猜大了')
+    } else if (num4 < num100) {
+      alert('猜小了')
+    } else {
+      alert('猜对了')
+      break
+    }
+  }
+</script>
+
+</html>

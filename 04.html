@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 4. 使用 prompt 输入三角形三条边的长度，判断它们是否能构成三角形，如果能，则判断是哪种类型的三角形（等边、等腰或普通）。
+  let arr = []
+  for (i = 0; i < 3; i++) arr.push(+prompt(`输入三角形的第${i + 1}条边`))
+  if (arr[0] + arr[1] > arr[2] && arr[1] + arr[2] > arr[0] && arr[2] + arr[0] > arr[1]) {
+    if (arr[0] === arr[1] && arr[1] === arr[2] && arr[2] === arr[0]) {
+      alert('等边三角形')
+    } else if (arr[0] === arr[1] || arr[1] === arr[2] || arr[2] === arr[0]) {
+      alert('等腰三角形')
+    } else {
+      alert('普通三角形')
+    }
+  } else {
+    alert('不构成三角形')
+  }
+</script>
+
+</html>

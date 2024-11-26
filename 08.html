@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 8. 使用 prompt 输入一个字符串，使用循环将其反转并 alert 输出。
+  let str = prompt('输入一个字符串')
+  let newStr = ''
+  for (let i = 0; i < str.length; i++) {
+    newStr += str[str.length - i - 1]
+  }
+  document.write(newStr)
+</script>
+
+</html>
