@@ -21,22 +21,28 @@
   // }
   // document.write(a)
 
-  // 第七题优化
+  // // 第七题优化
+  // let n = prompt('输入一个整数 n')
+  // let a = [1, 1]
+  // if (n > a.length) {
+  //   let i = n - a.length
+  //   while (i > 0) {
+  //     a.push(a[a.length - 1] + a[a.length - 2])
+  //     i--
+  //   }
+  // } else {
+  //   let j = a.length - n
+  //   while (j > 0) {
+  //     a.pop()
+  //     j--
+  //   }
+  // }
+  // document.write(a)
+
+  // 第七题优化2
   let n = prompt('输入一个整数 n')
-  let a = [1, 1]
-  if (n > a.length) {
-    let i = n - a.length
-    while (i > 0) {
-      a.push(a[a.length - 1] + a[a.length - 2])
-      i--
-    }
-  } else {
-    let j = a.length - n
-    while (j > 0) {
-      a.pop()
-      j--
-    }
-  }
+  let a = []
+  for (let i = 0; i < n; i++) i <= 1 ? a.push(1) : a.push(a[a.length - 1] + a[a.length - 2])
   document.write(a)
 </script>
 
